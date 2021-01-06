@@ -15,6 +15,7 @@ public class CAS01 {
     // CAS(Compare And Swap) 比较和交换
     // 自旋锁———— AtomicXXX
     // 可能会出现ABA问题，解决方法是加version版本号
+    // 乐观锁
     AtomicInteger atomicInteger = new AtomicInteger();
 
     public void m() {
