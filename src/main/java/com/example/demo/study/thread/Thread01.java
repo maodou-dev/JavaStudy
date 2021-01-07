@@ -13,6 +13,7 @@ import java.util.concurrent.FutureTask;
  */
 public class Thread01 {
     private static class ExtendThread extends Thread {
+        @Override
         public void run() {
             System.out.println(Thread.currentThread().getName());
         }
