@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.projectTest.Student;
 import com.example.demo.projectTest.Teacher;
+import com.example.demo.study.spring.entity.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -15,6 +16,7 @@ public class DemoApplication {
         ConfigurableApplicationContext c = SpringApplication.run(DemoApplication.class, args);
         Teacher teacher = c.getBean(Teacher.class);
         Student student = c.getBean(Student.class);
+        Person person = c.getBean(Person.class);
         System.out.println(teacher);
     }
 
