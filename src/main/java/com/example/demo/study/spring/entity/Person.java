@@ -1,5 +1,8 @@
 package com.example.demo.study.spring.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @author zhengyd
  * @version 1.0.0
@@ -10,6 +13,7 @@ package com.example.demo.study.spring.entity;
 public class Person {
     private String name;
     private Integer age;
+
 
     public Person(String name, Integer age) {
         this.name = name;

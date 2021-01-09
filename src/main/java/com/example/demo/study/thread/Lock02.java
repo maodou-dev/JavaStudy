@@ -19,6 +19,7 @@ public class Lock02 {
 
     public static void main(String[] args) {
         Lock02 lock02 = new Lock02();
+
         Thread t2 = new Thread(() -> {
             try {
                 System.out.println("t2-start");

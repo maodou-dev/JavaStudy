@@ -1,8 +1,10 @@
 package com.example.demo.study.spring;
 
+import com.example.demo.study.spring.entity.Food;
 import com.example.demo.study.spring.entity.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 /**
  * bean的自动装配
@@ -17,9 +19,10 @@ import org.springframework.context.annotation.Configuration;
 public class MyConfiguration {
 
     @Bean("person")
-    public Person getPerson() {
+    @Scope(value= "prototype")
+    public Person getPerson(){
         Person person = new Person();
-        person.setName("张三");
+        person.setName("小张");
         person.setAge(19);
         return person;
     }
