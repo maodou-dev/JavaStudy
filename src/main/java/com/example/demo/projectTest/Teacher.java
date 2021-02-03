@@ -15,11 +15,8 @@ import org.springframework.stereotype.Component;
 public class Teacher {
     @Autowired
     Student student;
-
     String name = "teacher";
-
-    public Teacher() {
+    public Teacher(){
         System.out.println(student);
     }
-
 }

@@ -1,10 +1,7 @@
 package com.example.demo.study.thread;
 
-import org.springframework.data.redis.core.TimeoutUtils;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -25,34 +22,22 @@ public class CAS01 {
         for (int i = 0; i < 10000; i++) {
             atomicInteger.incrementAndGet();
         }
-        // TODO 学习
-       // ThreadLocal threadLocal;
 
     }
 
     public static void main(String[] args) throws InterruptedException {
-//        CAS01 cas01 = new CAS01();
-//        List<Thread> threads = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            threads.add(new Thread(cas01::m));
-//        }
-//        for (Thread t : threads) {
-//
-//            t.start();
-//
-////            TimeUnit.SECONDS.sleep(1);
-////            System.out.println(cas01.atomicInteger);
-//
-//        }
-//
-//        for (Thread t : threads) {
-//            t.join();
-//            System.out.println(cas01.atomicInteger);
-//
-//        }
-        //System.out.println(cas01.atomicInteger);
-
-        System.out.println(TimeoutUtils.toSeconds(180000L, TimeUnit.MILLISECONDS));
+        CAS01 cas01 = new CAS01();
+        List<Thread> threads = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            threads.add(new Thread(cas01::m));
+        }
+        for (Thread t : threads) {
+            t.start();
+        }
+        for (Thread t : threads) {
+            t.join();
+        }
+        System.out.println(cas01.atomicInteger);
 
     }
 }
