@@ -41,5 +41,22 @@ public class Volatile02 {
         Thread.sleep(1000);
         volatile02.flag = false;
 
+        boolean a = true;
+        String m = a==false?(new Test2().getName()):"";
+        System.out.println(m);
+
+    }
+
+    static class Test2{
+        String name;
+
+        public String getName() {
+            name = "a";
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 }
