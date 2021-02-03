@@ -19,23 +19,6 @@ import java.util.*;
 public class Test {
 
 
-//    AccessKey ID
-//    LTAI4G2nsQm78X8eMDfHxrUY
-//    AccessKey Secret
-//4WTXGL68uLjwHZIszpPWUeCbZZIrdx
-//    http://shared.csb.cn-hangzhou.aliyuncs.com:8086/1.0.0/demoZ
-
-
-    //请求头
-/*    _api_timestamp:1604728996503
-    _inner_ecsb_rpc_id:0
-    _api_name:demoZ
-    _api_signature:DhNmg8SA7EKRHQbbqqcYWJO32hg=
-    _inner_ecsb_trace_id:0a981da216047289965037384d60db
-    Accept-Encoding:gzip
-    _api_version:1.0.0
-    _api_access_key:LTAI4G2nsQm78X8eMDfHxrUY
-    Content-Type:application/x-www-form-urlencoded; charset=UTF-8*/
 
     public static void main(String[] args) throws Exception {
         URL url = new URL("http://shared.csb.cn-hangzhou.aliyuncs.com:8086/CSB");
@@ -45,8 +28,8 @@ public class Test {
         conn.setDoOutput(true);
         conn.setDoInput(true);
         // 分配的ak,sk
-        String ak = "LTAI4G2nsQm78X8eMDfHxrUY";
-        String sk = "4WTXGL68uLjwHZIszpPWUeCbZZIrdx";
+        String ak = "****";
+        String sk = "****";
         // 使用TreeMap完成字典序排序
         TreeMap<String, String> params = new TreeMap<>();
 
