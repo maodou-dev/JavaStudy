@@ -1,6 +1,7 @@
 package com.example.demo.study.spring.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,11 +11,11 @@ import org.springframework.stereotype.Component;
  * @date 2021/1/9
  * @time 16:05
  */
-@Component
+//@Component
 public class B {
 
 
-    @Autowired
+//    @Autowired
     private A a;
 
     private String name = "B";

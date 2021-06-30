@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 @DependsOn({"teacher"})
 public class Student {
 
+//    @Autowired
     Teacher teacher;
     String name = "student";
 

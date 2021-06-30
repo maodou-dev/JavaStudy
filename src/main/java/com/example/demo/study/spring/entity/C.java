@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 
 public class C {
-    @Autowired
+//    @Autowired
     private A a;
 
     public A getA() {

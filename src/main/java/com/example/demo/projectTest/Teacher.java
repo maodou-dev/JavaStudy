@@ -19,7 +19,7 @@ public class Teacher {
     String name = "teacher";
 
     public Teacher() {
-        System.out.println(student);
+        System.out.println(student + "11111");
     }
 
 }

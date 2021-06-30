@@ -19,8 +19,8 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext cxt = SpringApplication.run(DemoApplication.class, args);
-        A a = cxt.getBean(A.class);
-        B b = cxt.getBean(B.class);
+//        A a = cxt.getBean(A.class);
+//        B b = cxt.getBean(B.class);
 //        C c = cxt.getBean(C.class);
         System.out.println();
 

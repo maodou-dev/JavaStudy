@@ -10,12 +10,16 @@ import org.springframework.stereotype.Component;
  * @date 2021/1/9
  * @time 16:05
  */
-@Component
+//@Component
 public class A {
-    @Autowired
+//    @Autowired
     private B b;
 
     private String name = "A";
+
+    public A() {
+
+    }
 
     public A(B b) {
         this.b = b;
@@ -25,7 +29,15 @@ public class A {
         return b;
     }
 
+    public String getString() {
+        return "string";
+    }
+
     public void setB(B b) {
         this.b = b;
+    }
+
+    public static void test() {
+        System.out.println("aaa");
     }
 }
